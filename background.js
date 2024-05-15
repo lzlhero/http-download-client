@@ -1,5 +1,5 @@
 
-// get url from DOM element type.
+// get download url by context menu passing type.
 function getUrl(info, type) {
   var url = "";
 
