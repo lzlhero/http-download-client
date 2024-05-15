@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Download Client Options</title>
+<style>
+#status {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+#wrapper {
+  text-align: center;
+  margin-top: 100px;
+}
+
+label {
+  color: #666;
+  margin-right: 5px;
+  font-size: 30px;
+}
+
+input {
+  border: 1px solid #666;
+  padding: 5px;
+  font-size: 25px;
+  width: 400px;
+  border-radius: 5px;
+  background: #eee;
+}
+
+input:focus {
+  background: #fff;
+}
+
+#bottom {
+  margin-top: 30px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  color: #fff;
+  font-size: 20px;
+  background: #1973e7;
+}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="status"></div>
+
+  <label for="txt-server">Server:</label>
+  <input type="text" id="txt-server" placeholder="http or https url">
+
+  <div id="bottom">
+    <button id="btn-save">Save</button>
+  </div>
+</div>
+
+<script src="options.js"></script>
+</body>
+</html>
