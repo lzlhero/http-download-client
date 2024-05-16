@@ -21,10 +21,10 @@
     "message": "Download current audio"
   },
   "options_page_title": {
-    "message": "Download Client Options"
+    "message": "Download Settings"
   },
   "server_label": {
-    "message": "Download Server:"
+    "message": "Download Server: "
   },
   "server_placeholder": {
     "message": "http or https url"
