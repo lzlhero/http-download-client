@@ -1,0 +1,35 @@
+{
+  "start_server_prompt": {
+    "message": "需要开启下载服务器后，再进行下载。"
+  },
+  "download_current_page": {
+    "message": "下载当前页面"
+  },
+  "download_current_frame": {
+    "message": "下载当前框架页"
+  },
+  "download_current_link": {
+    "message": "下载当前链接"
+  },
+  "download_current_image": {
+    "message": "下载当前图片"
+  },
+  "download_current_video": {
+    "message": "下载当前视频"
+  },
+  "download_current_audio": {
+    "message": "下载当前音频"
+  },
+  "options_page_title": {
+    "message": "下载客户端设置"
+  },
+  "server_label": {
+    "message": "下载服务器: "
+  },
+  "server_placeholder": {
+    "message": "http 或 https 地址"
+  },
+  "save": {
+    "message": "保存"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "start_server_prompt": {
+    "message": "You need to open the download server before downloading."
+  },
+  "download_current_page": {
+    "message": "Download current page"
+  },
+  "download_current_frame": {
+    "message": "Download current frame"
+  },
+  "download_current_link": {
+    "message": "Download current link"
+  },
+  "download_current_image": {
+    "message": "Download current image"
+  },
+  "download_current_video": {
+    "message": "Download current video"
+  },
+  "download_current_audio": {
+    "message": "Download current audio"
+  },
+  "options_page_title": {
+    "message": "Download Client Options"
+  },
+  "server_label": {
+    "message": "Download Server:"
+  },
+  "server_placeholder": {
+    "message": "http or https url"
+  },
+  "save": {
+    "message": "Save"
+  }
+}

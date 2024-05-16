@@ -40,37 +40,38 @@ function onContextClick(info, tab, type) {
 
     // send url to http-download-server
     fetch(serverUrl + "?url=" + encodeURIComponent(url) + "&out=" + encodeURIComponent(outFile)).catch(function(error) {
-      alert("需要开启下载服务器后，再进行下载");
+      alert(chrome.i18n.getMessage("start_server_prompt"));
     });
   });
 }
 
 // create download menu item into context
 function createContextMenus() {
+  var getMessage = chrome.i18n.getMessage;
   const menus = [
     {
       context: "page",
-      title: "下载当前页面",
+      title: getMessage("download_current_page"),
     },
     {
       context: "frame",
-      title: "下载当前框架页",
+      title: getMessage("download_current_frame"),
     },
     {
       context: "link",
-      title: "下载当前链接",
+      title: getMessage("download_current_link"),
     },
     {
       context: "image",
-      title: "下载当前图片",
+      title: getMessage("download_current_image"),
     },
     {
       context: "video",
-      title: "下载当前视频",
+      title: getMessage("download_current_video"),
     },
     {
       context: "audio",
-      title: "下载当前音频",
+      title: getMessage("download_current_audio"),
     }
   ];
 
