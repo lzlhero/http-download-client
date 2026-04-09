@@ -35,6 +35,8 @@ function onContextClick(info, tab, type) {
   chrome.tabs.executeScript( {
     code: "window.getSelection().toString();"
   }, function(selection) {
+    if (selection === undefined) return;
+
     var serverUrl = localStorage.getItem("server.url") || "http://127.0.0.1:9999";
     var outFile = selection[0].trim();
 
