@@ -2,15 +2,19 @@
   "name": "HTTP Download Client",
   "description": "Execute shell download command from context menu.",
   "version": "0.1",
+  "manifest_version": 3,
   "permissions": [
     "contextMenus",
+    "storage",
+    "scripting",
+    "activeTab"
+  ],
+  "host_permissions": [
     "http://*/*",
     "https://*/*"
   ],
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js"
   },
   "options_page": "options.html",
   "icons": {
@@ -19,12 +23,11 @@
     "48": "icon48.png",
     "128": "icon128.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "icon16.png",
       "32": "icon32.png"
     }
   },
-  "default_locale": "en",
-  "manifest_version": 2
+  "default_locale": "en"
 }

@@ -19,7 +19,9 @@ function localizeHtmlPage() {
 // save options to chrome.storage
 function saveOptions() {
   var serverUrl = document.getElementById("txt-server").value;
-  localStorage.setItem("server.url", serverUrl);
+  chrome.storage.local.set({
+    serverUrl: serverUrl
+  });
 
   // Update status to let user know options were saved.
   var status = document.getElementById("status");
@@ -32,7 +34,12 @@ function saveOptions() {
 
 // stored in chrome.storage.
 function restoreOptions() {
-  document.getElementById("txt-server").value = localStorage.getItem("server.url") || "http://127.0.0.1:9999";
+  chrome.storage.local.get(
+    ["serverUrl"],
+    (result) => {
+      document.getElementById("txt-server").value = result["serverUrl"] || "http://127.0.0.1:9999";
+    }
+  );
 }
 
 // localize first
