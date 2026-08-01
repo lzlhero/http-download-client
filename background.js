@@ -75,7 +75,7 @@ chrome.runtime.onInstalled.addListener(() => {
   }
 });
 
-// handle context menu item after it has been clicked
+// handle context menu item when it clicked
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   var url = getUrl(info);
   if (!url) return;
@@ -84,7 +84,7 @@ chrome.contextMenus.onClicked.addListener((info, tab) => {
     ["serverUrl"],
     (result) => {
       var serverUrl = result["serverUrl"] || "http://127.0.0.1:9999";
-      var outFile = info.selectionText ? info.selectionText.trim(): "";
+      var outFile = info.selectionText ? info.selectionText.trim() : "";
 
       // send url to http-download-server
       fetch(serverUrl + "?url=" + encodeURIComponent(url) + "&out=" + encodeURIComponent(outFile))
